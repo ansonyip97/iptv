@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Auto Redirect</title>
+</head>
+<body>
+  <script>
+    fetch('https://inews-api.tvb.com/news/checkout/live/hd/ott_C_h264?profile=safari')
+      .then(response => response.json())
+      .then(data => {
+        const hdUrl = data.content.url.hd;
+        window.location.href = hdUrl;
+      })
+      .catch(error => {
+        console.log('Error:', error);
+      });
+  </script>
+</body>
+</html>
