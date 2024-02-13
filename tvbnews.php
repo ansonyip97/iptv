@@ -1,7 +1,7 @@
 <?php
 header('Content-Type: application/json');
 
-$endpoint = '';
+$endpoint = 'https://inews-api.tvb.com/news/checkout/live/hd/ott_C_h264?profile=safari';
 
 $ch = curl_init();
 
